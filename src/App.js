@@ -113,7 +113,6 @@ class App extends Component {
     var table = document.getElementById("myList");
     for (x = table.rows.length; x > 1; x--) {
       //creates deletes all data in the chart
-      alert(x);
       table.deleteRow(1);
     }
   };
@@ -176,7 +175,10 @@ class App extends Component {
           />
         </main>
 
-        {/**Renders the table where data will be placed into */}
+        {
+          /**Renders the table where data will be placed into */
+          alert("Update gitHub")
+        }
         <div className="mx-auto">
           <table id="myList">
             <tr>
@@ -186,7 +188,7 @@ class App extends Component {
           </table>
         </div>
 
-        <textarea id="notes"></textarea>
+        <textarea id="notes">Add Notes Here...</textarea>
 
         <style>
           {/**CSS styling for the table */}
