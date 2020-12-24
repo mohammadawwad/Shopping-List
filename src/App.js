@@ -55,7 +55,7 @@ class App extends Component {
 
   handleName = () => {
     //askes for the name of the item that you will add to your list
-    var name = prompt("name");
+    var name = prompt("Item name:");
     return name;
   };
 
