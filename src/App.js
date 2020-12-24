@@ -175,10 +175,7 @@ class App extends Component {
           />
         </main>
 
-        {
-          /**Renders the table where data will be placed into */
-          alert("Update gitHub")
-        }
+        {/**Renders the table where data will be placed into */}
         <div className="mx-auto">
           <table id="myList">
             <tr>
