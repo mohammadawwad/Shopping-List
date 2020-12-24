@@ -190,6 +190,12 @@ class App extends Component {
         <style>
           {/**CSS styling for the table */}
           {`
+          
+          main.container{
+            margin: 0px;
+            margin-left: 5px;
+            padding: 0px;
+          }
 
           #myList{
             position: relative;  

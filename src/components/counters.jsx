@@ -18,20 +18,23 @@ class Counters extends Component {
       <div>
         <div className="button" id="buttons">
           {" "}
-          <button onClick={onReset} className="btn btn-primary btn-sml m-2">
+          <button onClick={onReset} className="btn btn-primary btn-sml my-2">
             Reset
           </button>
-          <button onClick={onCreate} className="btn btn-secondary btn-sml m-2">
+          <button
+            onClick={onCreate}
+            className="btn btn-secondary btn-sml my-2 mx-2"
+          >
             Create
           </button>
-          <button onClick={onInfo} className="btn btn-success btn-sml m-2">
+          <button onClick={onInfo} className="btn btn-success btn-sml my-2">
             Print
           </button>
         </div>
 
         <div id="back">
           {" "}
-          <button onClick={onBack} className="btn btn-primary btn-sml m-2">
+          <button onClick={onBack} className="btn btn-primary btn-sml my-2">
             Back
           </button>
           <style>
