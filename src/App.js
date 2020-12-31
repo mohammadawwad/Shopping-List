@@ -98,10 +98,17 @@ class App extends Component {
       //creates rows based on input
       var table = document.getElementById("myList");
       var row = table.insertRow(1);
-      var itemCell = row.insertCell(0);
-      var quantityCell = row.insertCell(1);
-      itemCell.innerHTML = info;
-      quantityCell.innerHTML = quantity;
+
+      if (quantity == 1) {
+        var itemCell = row.insertCell(0);
+        itemCell.setAttribute("colspan", "2");
+        itemCell.innerHTML = info;
+      } else {
+        var itemCell = row.insertCell(0);
+        var quantityCell = row.insertCell(1);
+        itemCell.innerHTML = info;
+        quantityCell.innerHTML = quantity;
+      }
     }
     //calls the print function
     return window.print();
@@ -156,6 +163,9 @@ class App extends Component {
 
     return (
       <React.Fragment>
+        {/*Renders Title*/}
+        <h3>Easy Shopping</h3>
+
         {/*Renders the navigation bar */}
         <NavBar
           totalCounters={this.state.counters.filter((c) => c.value > 0).length}
@@ -179,8 +189,8 @@ class App extends Component {
         <div className="mx-auto">
           <table id="myList">
             <tr>
-              <th>Items</th>
-              <th>Quantity</th>
+              <th id="thTitle">Items</th>
+              <th id="thQuantity">Quantity</th>
             </tr>
           </table>
         </div>
@@ -190,7 +200,15 @@ class App extends Component {
         <style>
           {/**CSS styling for the table */}
           {`
-          
+
+          h3{
+            margin: 0px;
+            padding: 0px;
+            padding-bottom: 2px;
+            text-align: center;
+            background-color: #F8F9FA;
+          }  
+
           main.container{
             margin: 0px;
             margin-left: 5px;
@@ -214,9 +232,15 @@ class App extends Component {
           td{
             border: 2px solid black;
             padding: 2px;
-            min-width: 100px;
             font-size: 24px;
           }
+
+          #noValue{
+            border: 2px solid black;
+            padding: 2px;
+            font-size: 24px;
+          }
+
 
           textarea {
             display: block;
@@ -228,7 +252,8 @@ class App extends Component {
 
           #notes{
             color: black;
-            margin-top: 10px;
+            background-color: #F8F9FA;
+            margin-top: 15px;
             margin: 5px;
           }
         
