@@ -4,6 +4,8 @@ import "./App.css";
 import Counters from "./components/counters";
 import Details from "./Details";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//module.exports.cow = this.state.counters;
+//console.log(cow);
 
 class App extends Component {
   state = {
@@ -103,11 +105,13 @@ class App extends Component {
         var itemCell = row.insertCell(0);
         itemCell.setAttribute("colspan", "2");
         itemCell.innerHTML = info;
-      } else {
+      } else if (quantity > 1) {
         var itemCell = row.insertCell(0);
         var quantityCell = row.insertCell(1);
         itemCell.innerHTML = info;
         quantityCell.innerHTML = quantity;
+      } else {
+        console.log("Item quantitiy is not == or more than 1");
       }
     }
     //calls the print function
