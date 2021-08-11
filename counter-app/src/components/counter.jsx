@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import React, { Component } from "react";
 
 class Counter extends Component {
   componentDidUpdate(prevProps, prevSate) {
